@@ -41,12 +41,10 @@ so ~/.vim/config/maps.vim
 so ~/.vim/config/plugins.vim
 so ~/.vim/config/plugins-config.vim
 
-"Importa las configuraciones de nvim
-
-
 "--------      Theme     ---------------
 colorscheme minimalist
-set t_Co=256
-let g:airline_theme='minimalist'
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
+
+"status bar configuration to lightline
+if !has('gui_running')
+  set t_Co=256
+endif

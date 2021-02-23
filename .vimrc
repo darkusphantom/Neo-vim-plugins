@@ -25,19 +25,22 @@ set cursorline "Señala la linea actual
 "set spelllang=en,es  " Corregir palabras usando diccionarios en inglés y español
 set termguicolors  " Activa true colors en la terminal
 set background=dark  " Fondo del tema: light o dark
-set nocompatible "Require for plugins vim-polygot
-" Actualizar barra cada 250 mili segundos (Para gitgutter)
-set updatetime=250
+set updatetime=250 " Actualizar barra cada 250 mili segundos (Para gitgutter)
 
 "Importa las configuraciones de esa direccion
 so ~/.vim/config/maps.vim
 so ~/.vim/config/plugins.vim
 so ~/.vim/config/plugins-config.vim
-so ~/.vim/config/plugins-ignore.vim
+"so ~/.vim/config/plugins-ignore.vim
+
+"Para airline o lightline
+if !has('gui_running')
+  set t_Co=256
+endif
+
+"Export config of lightline plugin
+so ~/.vim/lightline/config.vim
 
 "--------      Theme     ---------------
 colorscheme minimalist
-set t_Co=256
-let g:airline_theme='minimalist'
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
+
