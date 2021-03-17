@@ -1,0 +1,16 @@
+{
+  "suggest.noselect": false,
+  "coc.preference.formatOnSaveFiletypes": [
+    "css",
+    "markdown",
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "javascriptreact",
+    "typescript.tsx",
+    "graphql"
+  ],
+  "languageserver": {
+  }
+}
