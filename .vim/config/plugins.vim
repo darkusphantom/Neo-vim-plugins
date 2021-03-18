@@ -1,7 +1,6 @@
 " Configuracion de instalador de plugins con vim-plug
 call plug#begin('~/.vim/plugged')
 
-"------------- Plugins -------------------
 "syntax
 Plug 'dense-analysis/ale' "syntax checking and semantic errors
 Plug 'yuezk/vim-js' "js syntax
@@ -33,14 +32,9 @@ Plug 'terryma/vim-multiple-cursors' " Multiply cursors like sublimeText or VS Co
 "Indent
 Plug 'Yggdroot/indentLine' " Muestra los niveles de indentación con líneas verticales.
 
-"Snippets
-"Plug 'sirver/ultisnips' "Provee porciones de código reusables.
-"Plug 'honza/vim-snippets' "Va con el de arriba
-
 "Status bar
 Plug 'vim-airline/vim-airline' "Tunea la parte inferior de vim con themes asi como powerline10k
 Plug 'vim-airline/vim-airline-themes'  " Temas para airline
-"Plug 'itchyny/lightline.vim' "A light and configurable statusline/tabline plugin for Vim (Puede ser un alternativo de vim-airline)
 
 "Autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "Autocompletado
