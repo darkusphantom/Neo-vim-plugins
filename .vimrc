@@ -1,4 +1,4 @@
-"Archivo de configuracion IDE de VIM
+"Archivo de configuracion IDE de VIM e importacion a NVIM
 set number "Coloca los numeros al lado del editor (Por defecto no viene incluido
 set mouse=a "Activa el mouse dentro del editor
 set numberwidth=1 "Setea el ancho de los numeros a la derecha en el editor
@@ -27,20 +27,47 @@ set termguicolors  " Activa true colors en la terminal
 set background=dark  " Fondo del tema: light o dark
 set updatetime=250 " Actualizar barra cada 250 mili segundos (Para gitgutter)
 
+filetype plugin indent on
+set list
+
+"------         Configuracion de Coc-vim en Neovim
+" TextEdit might fail if hidden is not set.
+set hidden
+
+" Some servers have issues with backup files, see #649.
+set nobackup
+set nowritebackup
+
+" Give more space for displaying messages.
+set cmdheight=2
+
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+"set updatetime=300 "Coincidencia con vimrc - gitgutter
+
+" Don't pass messages to |ins-completion-menu|.
+set shortmess+=c
+
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+if has("patch-8.1.1564")
+  " Recently vim can merge signcolumn and number column into one
+  set signcolumn=number
+else
+  set signcolumn=yes
+endif
+
+
 "Importa las configuraciones de esa direccion
-so ~/.vim/config/maps.vim
-so ~/.vim/config/plugins.vim
-so ~/.vim/config/plugins-config.vim
-"so ~/.vim/config/plugins-ignore.vim
+source ~/.vim/config/maps.vim
+source ~/.vim/config/plugins.vim
+source ~/.vim/config/plugins-config.vim
+
+"--------      Theme     ---------------
+colorscheme minimalist
 
 "Para airline o lightline
 if !has('gui_running')
   set t_Co=256
 endif
-
-"Export config of lightline plugin
-so ~/.vim/lightline/config.vim
-
-"--------      Theme     ---------------
-colorscheme minimalist
 

@@ -1,6 +1,7 @@
 {
   "suggest.noselect": false,
-  "coc.preference.formatOnSaveFiletypes": [
+  "coc.preferences.formatOnType": true,
+  "coc.preferences.formatOnSaveFiletypes": [
     "css",
     "markdown",
     "javascript",
@@ -11,6 +12,10 @@
     "typescript.tsx",
     "graphql"
   ],
-  "languageserver": {
-  }
+  "tsserver.formatOnType": true,
+  "tsserver.log": "verbose",
+  "tsserver.trace.server": "verbose",
+  "eslint.packageManager": "yarn",
+  "eslint.autoFixOnSave": true,
+  "prettier.disableSuccessMessage": true
 }

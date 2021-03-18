@@ -1,13 +1,13 @@
 " Configuracion de instalador de plugins con vim-plug
 call plug#begin('~/.vim/plugged')
 
-"------------- Plugins -------------------
 "syntax
-Plug 'dense-analysis/ale' "syntax checking and semantic errors
 Plug 'yuezk/vim-js' "js syntax
 Plug 'pangloss/vim-javascript' "javascript supportv
 Plug 'maxmellon/vim-jsx-pretty' "jsx syntax
-Plug 'leafgarland/typescript-vim' "typescript sintax
+Plug 'leafgarland/typescript-vim' "typescript syntax
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' } " React Components styles syntax
+"Plug 'jparise/vim-graphql' " GraphQL Syntax
 Plug 'prettier/vim-prettier', { 'do': 'npm install' } "A vim plugin wrapper for prettier, pre-configured with custom default prettier settings.
 Plug 'https://github.com/sheerun/vim-polyglot.git' "Colección de varios plugins de resaltado de sintaxis.
 
@@ -33,17 +33,13 @@ Plug 'terryma/vim-multiple-cursors' " Multiply cursors like sublimeText or VS Co
 "Indent
 Plug 'Yggdroot/indentLine' " Muestra los niveles de indentación con líneas verticales.
 
-"Snippets
-"Plug 'sirver/ultisnips' "Provee porciones de código reusables.
-"Plug 'honza/vim-snippets' "Va con el de arriba
-
 "Status bar
 Plug 'vim-airline/vim-airline' "Tunea la parte inferior de vim con themes asi como powerline10k
 Plug 'vim-airline/vim-airline-themes'  " Temas para airline
-"Plug 'itchyny/lightline.vim' "A light and configurable statusline/tabline plugin for Vim (Puede ser un alternativo de vim-airline)
 
 "Autocomplete
-Plug 'neoclide/coc.nvim', {'branch': 'release'} "Autocompletado
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'dense-analysis/ale' "(Alternative to coc.nvim) Check syntax in Vim asynchronously and fix files, with Language Server Protocol (LSP) support
 
 "Bookmarks
 Plug 'MattesGroeger/vim-bookmarks'
