@@ -2,11 +2,12 @@
 call plug#begin('~/.vim/plugged')
 
 "syntax
-Plug 'dense-analysis/ale' "syntax checking and semantic errors
 Plug 'yuezk/vim-js' "js syntax
 Plug 'pangloss/vim-javascript' "javascript supportv
 Plug 'maxmellon/vim-jsx-pretty' "jsx syntax
-Plug 'leafgarland/typescript-vim' "typescript sintax
+Plug 'leafgarland/typescript-vim' "typescript syntax
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' } " React Components styles syntax
+"Plug 'jparise/vim-graphql' " GraphQL Syntax
 Plug 'prettier/vim-prettier', { 'do': 'npm install' } "A vim plugin wrapper for prettier, pre-configured with custom default prettier settings.
 Plug 'https://github.com/sheerun/vim-polyglot.git' "Colección de varios plugins de resaltado de sintaxis.
 
@@ -37,7 +38,8 @@ Plug 'vim-airline/vim-airline' "Tunea la parte inferior de vim con themes asi co
 Plug 'vim-airline/vim-airline-themes'  " Temas para airline
 
 "Autocomplete
-Plug 'neoclide/coc.nvim', {'branch': 'release'} "Autocompletado
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'dense-analysis/ale' "(Alternative to coc.nvim) Check syntax in Vim asynchronously and fix files, with Language Server Protocol (LSP) support
 
 "Bookmarks
 Plug 'MattesGroeger/vim-bookmarks'

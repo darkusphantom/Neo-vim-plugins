@@ -1,25 +1,37 @@
-" Activar si coc causa fallos al inicio
-"let g:coc_disable_startup_warning = 1
+" Forces vim to rescan the entire buffer when highlighting. This does so at a performance cost, especially for large files. It is significantly faster in Neovim than in vim.
+syntax sync fromstart 
 
-" Instala snippets si no estan en nvim/vim
-let g:coc_global_extensions = ['coc-css', 'coc-emmet', 'coc-eslint', 'coc-git', 'coc-highlight', 'coc-json', 'coc-pairs', 'coc-prettier', 'coc-snippets', 'coc-styled-components', 'coc-react-refactor', 'coc-tsserver']
+autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+
+"Desactiva coc si causa fallos al inicio
+let g:coc_disable_startup_warning = 1
+
+" Install snippets if don't exit in Vim/Neovim
+let g:coc_global_extensions = [
+      \ 'coc-css',
+      \ 'coc-emmet',
+      \ 'coc-git',
+      \ 'coc-highlight',
+      \ 'coc-json',
+      \ 'coc-pairs',
+      \ 'coc-snippets',
+      \ 'coc-styled-components',
+      \ 'coc-react-refactor',
+      \ 'coc-tsserver',
+      \ 'coc-rome'
+      \ ]
+
+if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
+  let g:coc_global_extensions += ['coc-eslint']
+endif
+
+if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
+  let g:coc_global_extensions += ['coc-prettier']
+endif
 
 "Coc will display diagnostics (errors and warnings) in a tooltip for words you cursor over. The mapping to show documentation for the word under the cursor:
 nnoremap <silent> K :call CocAction('doHover')<CR>
-
-"A function more automatic behavior where when cursoring over a word, I'll see either the diagnostic if it exists, otherwise the documentation.
-"function! ShowDocIfNoDiagnostic(timer_id)
-"  if (coc#util#has_float() == 0)
-"    silent call CocActionAsync('doHover')
-"  endif
-"endfunction
-
-"function! s:show_hover_doc()
-"  call timer_start(500, 'ShowDocIfNoDiagnostic')
-"endfunction
-
-"autocmd CursorHoldI * :call <SID>show_hover_doc()
-"autocmd CursorHold * :call <SID>show_hover_doc()
 
 "Settings of git coc-vim
 " Use tab for trigger completion with characters ahead and navigate.
@@ -45,13 +57,13 @@ endif
 
 " Make <CR> auto-select the first completion item and notify coc.nvim to
 " format on enter, <cr> could be remapped by other vim plugin
-"inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-"                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-"nmap <silent> [g <Plug>(coc-diagnostic-prev)
-"nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
@@ -80,7 +92,7 @@ nmap <leader>rn <Plug>(coc-rename)
 
 " Formatting selected code.
 "xmap <leader>f  <Plug>(coc-format-selected)
-"nmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
 
 augroup mygroup
   autocmd!
