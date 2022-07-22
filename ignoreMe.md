@@ -17,14 +17,13 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 ## Snippets
 
-Plug 'sirver/ultisnips' "Provee porciones de código reusables.
-Plug 'honza/vim-snippets' "Va con el de arriba
 Plug 'itchyny/lightline.vim' "A light and configurable statusline/tabline plugin for Vim (Puede ser un alternativo de vim-airline)
+Plug 'dense-analysis/ale' "(Alternative to coc.nvim) Check syntax in Vim asynchronously and fix files, with Language Server Protocol (LSP) support
 
 ## Extensiones Coc-vim
 
-  + coc-cssmodule: Autocompletado y definicion de css en lenguajes como React
-  + coc-explorer: Explorador para coc-vim (Parecido a NERDTree pero con mas
-  + coc-html-css-support: Complementacion para id y class HTML
-  + coc-htmlhint: Integrates the HTMLHint static analysis tool into coc.nvim.
-  + coc-markdownlint: markdown extension for coc.nvim
+- coc-cssmodule: Autocompletado y definicion de css en lenguajes como React
+- coc-explorer: Explorador para coc-vim (Parecido a NERDTree pero con mas
+- coc-html-css-support: Complementacion para id y class HTML
+- coc-htmlhint: Integrates the HTMLHint static analysis tool into coc.nvim.
+- coc-markdownlint: markdown extension for coc.nvim

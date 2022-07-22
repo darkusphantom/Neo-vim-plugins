@@ -39,7 +39,8 @@ Plug 'vim-airline/vim-airline-themes'  " Temas para airline
 
 "Autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'dense-analysis/ale' "(Alternative to coc.nvim) Check syntax in Vim asynchronously and fix files, with Language Server Protocol (LSP) support
+Plug 'sirver/ultisnips' "Provee porciones de código reusables.
+Plug 'honza/vim-snippets' "Va con el de arriba
 
 "Bookmarks
 Plug 'MattesGroeger/vim-bookmarks'

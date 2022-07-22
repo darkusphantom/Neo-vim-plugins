@@ -2,7 +2,7 @@
 set number "Coloca los numeros al lado del editor (Por defecto no viene incluido
 set mouse=a "Activa el mouse dentro del editor
 set numberwidth=1 "Setea el ancho de los numeros a la derecha en el editor
-set clipboard=unnamed  "Todo lo que copies no saldra del clipboard de VIM. Es decir, no influira en el clipboard del sistema operativo
+set clipboard=unnamed  "Todo lo que copies no saldra del clipboard de VIM. Es decir, no influira en el clipboard del sistema operativo. Puedes escribir +y o +p si quieres sacar algo de vim
 syntax enable "Dejara un resaltado de color en la sintaxis
 set showcmd "Muestra los comandos que estas ejecutando
 set ruler "Muestra siempre la posicion donde se ubica el cursor

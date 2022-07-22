@@ -4,6 +4,10 @@ syntax sync fromstart
 autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 
+"La ruta ahora la version de node v15.9.0
+let g:coc_node_path = "~/.nvm/versions/node/v15.9.0/bin/node"
+
+
 "Desactiva coc si causa fallos al inicio
 let g:coc_disable_startup_warning = 1
 
@@ -149,6 +153,7 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+nnoremap <silent><leader>OR :OR<CR>
 
 " Add (Neo)Vim's native statusline support.
 " NOTE: Please see `:h coc-status` for integrations with external plugins that

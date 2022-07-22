@@ -1,0 +1,28 @@
+{
+  "suggest.noselect": false,
+  "coc.preferences.formatOnType": true,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "markdown",
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "javascriptreact",
+    "typescript.tsx",
+    "graphql"
+  ],
+  "snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/utils/snips"],
+  "snippets.extends": {
+    "cpp": ["c"],
+    "javascript": ["javascript"],
+    "javascriptreact": ["javascript "]
+  },
+  "tsserver.enable": false,
+  "tsserver.formatOnType": true,
+  "tsserver.log": "verbose",
+  "tsserver.trace.server": "verbose",
+  "eslint.packageManager": "yarn",
+  "eslint.autoFixOnSave": true,
+  "prettier.disableSuccessMessage": true
+}

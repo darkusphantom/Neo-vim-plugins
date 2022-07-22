@@ -12,6 +12,9 @@ nmap <leader>w :w<CR>
 "salir del archivo
 nmap <leader>q :q<CR>
 
+"Guardar y salir del archivo
+nmap <silent><leader>wq :wq<CR>
+
 "Salir completamente del archivo
 nmap <silent><leader>qa :qa!<CR>
 
