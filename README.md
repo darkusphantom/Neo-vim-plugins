@@ -1,14 +1,26 @@
 # Plugins para desarrollo web en Vim/NeoVim en Linux
 
+## Requisitos
+
+- Tener instalado git y Neovim
+
 ## Instalación
 
+**Para Linux**
 1. Abre la terminal y ve al archivo `.config` escribiendo: `cd ~/.config`.
 2. Crea una carpeta llamada `nvim` **(si no existe)** con el comando `mkdir nvim; cd nvim`.
 3. Clona el repositorio **dentro de ella.**
 4. Abre neovim (o vim) con `nvim` (para Neovim) o `vim` (para Vim)
 5. Instala los plugins escribiendo `:PlugInstall`.
 
----
+**Para Windows**
+1. Abre la terminal y ve al archivo `.config` escribiendo: `cd ~/.config`.
+2. Crea una carpeta llamada `nvim` **(si no existe)** con el comando `mkdir nvim; cd nvim`.
+3. Clona el repositorio **dentro de ella.**
+4. Abre neovim (o vim) con `nvim` (para Neovim) o `vim` (para Vim)
+5. Instala los plugins escribiendo `:PlugInstall`.
+
+## Plugins
 
 ### Gestor de plugin
 
@@ -37,13 +49,13 @@
 - Vim-bookmarks
 - Twit-vim
 
-### Temas
+## Temas
 
 - Gruvbox
 - Minimalist
 - Vim-code-dark
 
-### Extensiones Coc-vim
+## Extensiones Coc-vim
 
 - coc-css: Para CSS, SCSS, Less
 - coc-emmet: Provee recomendaciones para emmet
