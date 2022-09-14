@@ -26,6 +26,7 @@ set cursorline "Señala la linea actual
 set termguicolors  " Activa true colors en la terminal
 set background=dark  " Fondo del tema: light o dark
 set updatetime=250 " Actualizar barra cada 250 mili segundos (Para gitgutter)
+set redrawtime=10000 " Parcialmente arregla el error de redrawtime exceed syntax Highlight
 
 filetype plugin indent on
 set list
