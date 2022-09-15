@@ -2,7 +2,7 @@
 
 ## Requisitos
 
-- Tener instalado git y Neovim
+- Tener instalado git, Vim y Neovim
 
 ## Instalación
 
