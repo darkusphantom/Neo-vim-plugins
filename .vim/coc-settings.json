@@ -3,20 +3,23 @@
   "coc.preferences.formatOnType": true,
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
-    "markdown",
     "javascript",
-    "typescript",
-    "typescriptreact",
-    "json",
     "javascriptreact",
     "typescript.tsx",
-    "graphql"
+    "typescript",
+    "typescriptreact",
+    "graphql",
+    "json",
+    "markdown"
   ],
   "snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/utils/snips"],
   "snippets.extends": {
     "cpp": ["c"],
     "javascript": ["javascript"],
-    "javascriptreact": ["javascript "]
+    "javascriptreact": ["javascript "],
+    "typescript": ["javascript"],
+    "javascriptvue": ["javascript"],
+    "go": ["go"]
   },
   "tsserver.enable": false,
   "tsserver.formatOnType": true,
@@ -24,5 +27,6 @@
   "tsserver.trace.server": "verbose",
   "eslint.packageManager": "yarn",
   "eslint.autoFixOnSave": true,
-  "prettier.disableSuccessMessage": true
+  "prettier.disableSuccessMessage": true,
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/14.0.3/clangd_14.0.3/bin/clangd"
 }
