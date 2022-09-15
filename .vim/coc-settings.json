@@ -8,23 +8,69 @@
     "typescript.tsx",
     "typescript",
     "typescriptreact",
+    "angular",
     "graphql",
     "json",
     "markdown"
   ],
+  "languageserver": {
+    "bash": {
+      "command": "bash-language-server",
+      "args": ["start"],
+      "filetypes": ["sh"]
+    },
+    "clangd": {
+      "command": "clangd",
+      "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
+      "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
+    },
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod"],
+      "filetypes": ["go"]
+    },
+    "R": {
+      "enable": true,
+      "command": "/usr/bin/R",
+      "args": ["--slave", "-e", "languageserver::run()"],
+      "filetypes": ["r"]
+    },
+    "rome-lsp": {
+      "enable": true,
+      "command": "rome",
+      "args": ["lsp"],
+      "filetypes": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "json"
+      ],
+      "rootPatterns": [".config"],
+      "requireRootPattern": true
+    }
+  },
   "snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/utils/snips"],
   "snippets.extends": {
     "cpp": ["c"],
     "javascript": ["javascript"],
     "javascriptreact": ["javascript "],
     "typescript": ["javascript"],
-    "javascriptvue": ["javascript"],
     "go": ["go"]
   },
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "wxss.validate": false,
+  "stylelint.enable": false,
+  "stylelintplus.enable": true,
   "tsserver.enable": false,
   "tsserver.formatOnType": true,
   "tsserver.log": "verbose",
   "tsserver.trace.server": "verbose",
+  "angular.log": "verbose",
+  "angular.trace.server": "verbose",
+  "angular.suggest.includeCompletionsWithSnippetText": true,
   "eslint.packageManager": "yarn",
   "eslint.autoFixOnSave": true,
   "prettier.disableSuccessMessage": true,

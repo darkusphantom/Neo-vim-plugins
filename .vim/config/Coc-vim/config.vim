@@ -7,23 +7,31 @@ autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 "La ruta ahora la version de node v15.9.0
 let g:coc_node_path = "~/.nvm/versions/node/v15.9.0/bin/node"
 
-
 "Desactiva coc si causa fallos al inicio
 let g:coc_disable_startup_warning = 1
 
 " Install snippets if don't exit in Vim/Neovim
 let g:coc_global_extensions = [
-      \ 'coc-css',
-      \ 'coc-emmet',
       \ 'coc-git',
-      \ 'coc-highlight',
-      \ 'coc-json',
-      \ 'coc-pairs',
-      \ 'coc-snippets',
-      \ 'coc-styled-components',
+      \ 'coc-emmet',
+      \ 'coc-css',
+      \ 'coc-stylelint',
+      \ 'coc-stylelintplus',
+      \ 'coc-rome',
       \ 'coc-react-refactor',
+      \ 'coc-styled-components',
       \ 'coc-tsserver',
-      \ 'coc-rome'
+      \ 'coc-angular',
+      \ 'coc-vetur',
+      \ 'coc-clangd',
+      \ 'coc-clang-format-style-options',
+      \ 'coc-go',
+      \ 'coc-sh',
+      \ 'coc-json',
+      \ 'coc-snippets',
+      \ 'coc-pairs',
+      \ 'coc-highlight',
+      \ 'coc-eslint'
       \ ]
 
 if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
@@ -113,7 +121,6 @@ augroup end
 "nmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>do  <Plug>(coc-codeaction-selected)
 
-
 "----- Remap keys for applying codeAction to the current buffer.
 "nmap <leader>ac  <Plug>(coc-codeaction)
 "----- Apply AutoFix to problem on the current line.
@@ -164,13 +171,13 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 " Show all diagnostics.
 nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
-"nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
+nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
 " Show commands.
-"nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
+nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
 " Find symbol of current document.
 "nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
 " Search workspace symbols.
-nnoremap <silent><nowait> <space>sy  :<C-u>CocList -I symbols<cr>
+"nnoremap <silent><nowait> <space>sy  :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
 "nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 " Do default action for previous item.

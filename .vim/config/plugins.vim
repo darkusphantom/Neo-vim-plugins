@@ -41,7 +41,7 @@ Plug 'honza/vim-snippets' "Va con el de arriba
 "Navigation
 Plug 'easymotion/vim-easymotion' "Saltos de palabras
 Plug 'christoomey/vim-tmux-navigator' "Permite navegar entre buffers
-Plug 'terryma/vim-multiple-cursors' " Multiply cursors like sublimeText or VS Code
+Plug 'mg979/vim-visual-multi', {'branch': 'master'} " Multiply cursors like sublimeText or VS Code
 
 "---------- File-----------------
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files

@@ -19,7 +19,7 @@ nmap <silent><leader>wq :wq<CR>
 nmap <silent><leader>qa :qa!<CR>
 
 "Pasa al siguiente buffer
-nmap <leader>bn :bNext<CR>
+nmap <leader>bn :bnext<CR>
 
 "Pasa al anterior buffer
 nmap <leader>bp :bprevious<CR>
@@ -28,4 +28,5 @@ nmap <leader>bp :bprevious<CR>
 nmap <leader>bd :bdelete<CR>
 
 "PlugVim
-nmap <C-i> :PlugInstall<CR>
+nmap <S-i> :PlugInstall<CR>
+nmap <S-u> :PlugUpdate<CR>
