@@ -12,6 +12,16 @@ Que esto no te detenga y te invito a probarlo.
 
 ## Instalación
 
+### Por install.sh
+
+1. Descarga el archivo (`installer)[https://github.com/darkusphantom/Neo-vim-plugins/releases/tag/v1.0]`.
+2. Abre la terminal y dirigete a la ubicación donde guardaste el archivo.
+3. Ejecuta el comando chmod +x `nombre_del_installer`. Este comando te permite activar el permiso para ejecutar el instalador.
+4. Ejecuta `./nombre_del_installer` y se iniciará la instalación.
+5. Al finalizar, abre nvim o vim y ejecuta :PlugInstall para instalar los plugins de vim.
+
+### Manual
+
 **Para Linux**
 
 1. Abre la terminal y ve al archivo `.config` escribiendo: `cd ~/.config`.
